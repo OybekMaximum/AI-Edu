@@ -9,19 +9,26 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
+    private var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = ViewController()
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
-
+        configureDefaultUI()
+        launchUI(with: launchOptions)
         return true
     }
 
-}
+    private func configureDefaultUI() {
+        let backButtonItem = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self])
+        backButtonItem.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
+    }
 
+    private func launchUI(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+
+        appCoordinator = AppCoordinator(window: window, launchOptions: launchOptions)
+        appCoordinator?.start()
+    }
+
+}
