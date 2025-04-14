@@ -6,30 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AB166ECA2DAD066000E1BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB166EC22DAD066000E1BEC7 /* Assets.xcassets */; };
+		AB166ECC2DAD066000E1BEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */; };
+		AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */; };
+		AB166ED02DAD066000E1BEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EC72DAD066000E1BEC7 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB166EC22DAD066000E1BEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB166EC32DAD066000E1BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB166EC72DAD066000E1BEC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB166EC82DAD066000E1BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE4D4382D81B7B000CEF53F /* AI&Edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI&Edu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		ABE4D44A2D81B7B100CEF53F /* Exceptions for "AI&Edu" folder in "AI&Edu" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = ABE4D4372D81B7B000CEF53F /* AI&Edu */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		ABE4D43A2D81B7B000CEF53F /* AI&Edu */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				ABE4D44A2D81B7B100CEF53F /* Exceptions for "AI&Edu" folder in "AI&Edu" target */,
-			);
-			path = "AI&Edu";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ABE4D4352D81B7B000CEF53F /* Frameworks */ = {
@@ -42,10 +33,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB166ED32DAD0A0600E1BEC7 /* AI&Edu */ = {
+			isa = PBXGroup;
+			children = (
+				AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */,
+				AB166EC22DAD066000E1BEC7 /* Assets.xcassets */,
+				AB166EC32DAD066000E1BEC7 /* Info.plist */,
+				AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */,
+				AB166EC72DAD066000E1BEC7 /* ViewController.swift */,
+			);
+			path = "AI&Edu";
+			sourceTree = "<group>";
+		};
 		ABE4D42F2D81B7B000CEF53F = {
 			isa = PBXGroup;
 			children = (
-				ABE4D43A2D81B7B000CEF53F /* AI&Edu */,
+				AB166ED32DAD0A0600E1BEC7 /* AI&Edu */,
 				ABE4D4392D81B7B000CEF53F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +75,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				ABE4D43A2D81B7B000CEF53F /* AI&Edu */,
 			);
 			name = "AI&Edu";
 			packageProductDependencies = (
@@ -122,6 +122,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB166ECA2DAD066000E1BEC7 /* Assets.xcassets in Resources */,
+				AB166ECC2DAD066000E1BEC7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +134,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */,
+				AB166ED02DAD066000E1BEC7 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB166EC82DAD066000E1BEC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ABE4D44C2D81B7B100CEF53F /* Debug */ = {
