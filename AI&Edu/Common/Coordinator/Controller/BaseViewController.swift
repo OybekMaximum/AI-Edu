@@ -28,7 +28,11 @@ class BaseViewController: UIViewController {
     }
 
     // MARK: Base methods
-    func initialize() {}
+    func initialize() {
+        setupAppearance()
+        addSubviews()
+        setConstraints()
+    }
 
     /// Super method should be called when overridden
     func setupAppearance() {

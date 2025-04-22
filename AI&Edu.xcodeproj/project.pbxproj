@@ -47,6 +47,10 @@
 		AB166F2B2DAD0E1B00E1BEC7 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB166F172DAD0E1B00E1BEC7 /* Inter-Bold.ttf */; };
 		AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F152DAD0E1B00E1BEC7 /* Fonts.swift */; };
 		AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */; };
+		AB3581AC2DB0FE7C00768E3C /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3581AB2DB0FE7C00768E3C /* CourseModel.swift */; };
+		AB3581AE2DB0FFF600768E3C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3581AD2DB0FFF600768E3C /* UITableView+Extension.swift */; };
+		AB3581B12DB109FD00768E3C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3581B02DB109FD00768E3C /* HomeTableViewCell.swift */; };
+		AB53CC462DB774DF006D03B3 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC452DB774DF006D03B3 /* UILabel+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +95,10 @@
 		AB166F1E2DAD0E1B00E1BEC7 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		AB166F202DAD0E1B00E1BEC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		AB3581AB2DB0FE7C00768E3C /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		AB3581AD2DB0FFF600768E3C /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		AB3581B02DB109FD00768E3C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		AB53CC452DB774DF006D03B3 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		ABE4D4382D81B7B000CEF53F /* AI&Edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI&Edu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,10 +118,10 @@
 			children = (
 				AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */,
 				AB166ED42DAD0D5D00E1BEC7 /* AppCoordinator.swift */,
-				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
 				AB166EE92DAD0D5D00E1BEC7 /* Common */,
-				AB166EED2DAD0D5D00E1BEC7 /* Home */,
 				AB166EF12DAD0D5D00E1BEC7 /* PrepareApp */,
+				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
+				AB166EED2DAD0D5D00E1BEC7 /* Home */,
 				AB166EF52DAD0D5D00E1BEC7 /* Settings */,
 				AB166EF92DAD0D5D00E1BEC7 /* TabBar */,
 				AB166F132DAD0D9200E1BEC7 /* Resources */,
@@ -162,6 +170,8 @@
 			children = (
 				AB166EDF2DAD0D5D00E1BEC7 /* NotificationCenter+Extensions.swift */,
 				AB166EE02DAD0D5D00E1BEC7 /* UIViewController+Extensions.swift */,
+				AB3581AD2DB0FFF600768E3C /* UITableView+Extension.swift */,
+				AB53CC452DB774DF006D03B3 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +219,8 @@
 				AB166EEA2DAD0D5D00E1BEC7 /* HomeController.swift */,
 				AB166EEB2DAD0D5D00E1BEC7 /* HomeCoordinator.swift */,
 				AB166EEC2DAD0D5D00E1BEC7 /* HomeViewModel.swift */,
+				AB3581AB2DB0FE7C00768E3C /* CourseModel.swift */,
+				AB3581AF2DB109DC00768E3C /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -279,6 +291,14 @@
 				AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		AB3581AF2DB109DC00768E3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB3581B02DB109FD00768E3C /* HomeTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ABE4D42F2D81B7B000CEF53F = {
@@ -387,15 +407,19 @@
 				AB166EFD2DAD0D5D00E1BEC7 /* BaseNavigationController.swift in Sources */,
 				AB166EFE2DAD0D5D00E1BEC7 /* AuthController.swift in Sources */,
 				AB166EFF2DAD0D5D00E1BEC7 /* InputTextField.swift in Sources */,
+				AB3581B12DB109FD00768E3C /* HomeTableViewCell.swift in Sources */,
 				AB166F002DAD0D5D00E1BEC7 /* BaseViewController.swift in Sources */,
 				AB166F012DAD0D5D00E1BEC7 /* PrepareAppCoordinator.swift in Sources */,
 				AB166F022DAD0D5D00E1BEC7 /* HomeViewModel.swift in Sources */,
 				AB166F032DAD0D5D00E1BEC7 /* AuthViewModel.swift in Sources */,
+				AB53CC462DB774DF006D03B3 /* UILabel+Extensions.swift in Sources */,
 				AB166F042DAD0D5D00E1BEC7 /* BaseTextField.swift in Sources */,
+				AB3581AC2DB0FE7C00768E3C /* CourseModel.swift in Sources */,
 				AB166F052DAD0D5D00E1BEC7 /* TabBarViewModel.swift in Sources */,
 				AB166F062DAD0D5D00E1BEC7 /* AuthCoordinator.swift in Sources */,
 				AB166F072DAD0D5D00E1BEC7 /* BaseButton.swift in Sources */,
 				AB166F082DAD0D5D00E1BEC7 /* PrepareAppController.swift in Sources */,
+				AB3581AE2DB0FFF600768E3C /* UITableView+Extension.swift in Sources */,
 				AB166F092DAD0D5D00E1BEC7 /* SettingsViewModel.swift in Sources */,
 				AB166F0A2DAD0D5D00E1BEC7 /* PrepareAppViewModel.swift in Sources */,
 				AB166F0B2DAD0D5D00E1BEC7 /* Coordinator.swift in Sources */,

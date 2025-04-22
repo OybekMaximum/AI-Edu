@@ -22,16 +22,18 @@ class SettingsController: BaseViewController {
     override func initialize() {
         super.initialize()
 
+
+    }
+
+    override func setupAppearance() {
         view.backgroundColor = .green
     }
 
     override func addSubviews() {
-        super.addSubviews()
 
     }
 
     override func setConstraints() {
-        super.setConstraints()
 
     }
 }

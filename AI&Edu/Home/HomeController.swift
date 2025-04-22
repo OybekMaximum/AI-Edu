@@ -8,6 +8,20 @@
 import UIKit
 
 class HomeController: BaseViewController {
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        tableView.contentInsetAdjustmentBehavior = .always
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.register(CourseCardCell.self)
+        return tableView
+    }()
+
     private let viewModel: HomeViewModelProtocol
 
     init(viewModel: HomeViewModelProtocol) {
@@ -19,20 +33,39 @@ class HomeController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func initialize() {
-        super.initialize()
-
+    override func setupAppearance() {
         view.backgroundColor = .blue
+        let strr = "Courses"
+
+        navigationItem.title = strr
     }
 
     override func addSubviews() {
-        super.addSubviews()
-
+        view.addSubview(tableView)
     }
 
     override func setConstraints() {
-        super.setConstraints()
-
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
 
+extension HomeController:  UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.courses.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = CourseCardCell()
+        cell.configure(with: viewModel.courses[indexPath.row])
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

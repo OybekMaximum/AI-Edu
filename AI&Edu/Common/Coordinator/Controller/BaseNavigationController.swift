@@ -17,16 +17,16 @@ open class BaseNavigationController: UINavigationController {
 //        let backIndicatorImage = Images.iconArrowLeft.image.withRenderingMode(.alwaysTemplate)
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
-//        appearance.backgroundColor = Colors.backgroundPrimary.color.withAlphaComponent(0.85)
+        appearance.backgroundColor = Colors.backgroundPrimary.color.withAlphaComponent(0.85)
 //        appearance.setBackIndicatorImage(backIndicatorImage, transitionMaskImage: backIndicatorImage)
         appearance.backgroundEffect = UIBlurEffect(style: .regular)
-//        appearance.titleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor: Colors.contentPrimary.color
-//            NSAttributedString.Key.font: Fonts.Mulish.bold.font(size: 16)
-//        ]
+        appearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: Colors.contentPrimary.color,
+            NSAttributedString.Key.font: Fonts.Inter.bold.font(size: 16)
+        ]
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
-//        navigationBar.tintColor = Colors.contentPrimary.color
+        navigationBar.tintColor = Colors.contentPrimary.color
     }
 }
 
