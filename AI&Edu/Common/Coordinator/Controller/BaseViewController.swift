@@ -8,11 +8,10 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    private let gradientLayer = CAGradientLayer()
+
     // MARK: - ViewController lifecycle
-    override init(
-        nibName nibNameOrNil: String?,
-        bundle nibBundleOrNil: Bundle?
-    ) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         registerLanguageNotifications()
     }
@@ -27,6 +26,11 @@ class BaseViewController: UIViewController {
         initialize()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer.frame = view.bounds // Ensure gradient fills view after layout
+    }
+
     // MARK: Base methods
     func initialize() {
         setupAppearance()
@@ -34,11 +38,11 @@ class BaseViewController: UIViewController {
         setConstraints()
     }
 
-    /// Super method should be called when overridden
     func setupAppearance() {
         navigationItem.hidesBackButton = true
         navigationItem.backButtonTitle = ""
-        view.backgroundColor = Colors.backgroundPrimary.color
+
+        setupWowGradientBackground()
     }
 
     func addSubviews() {
@@ -49,8 +53,6 @@ class BaseViewController: UIViewController {
         fatalError("setConstraints() has not been implemented")
     }
 
-
-    /// Should be overriden in order to update language
     func updateLanguage() {}
 
     func registerLanguageNotifications() {
@@ -62,8 +64,6 @@ class BaseViewController: UIViewController {
         )
     }
 
-    // MARK: Notification methods
-    /// Adds keyboard show and hide observers, "keyboardShowAction" and "keyboardHideAction" method should be implemented
     func addKeyboardOberservers() {
         NotificationCenter.default.addObserver(
             self,
@@ -79,18 +79,9 @@ class BaseViewController: UIViewController {
         )
     }
 
-    /// Removes keyboard show and hide observers
     func removeKeyboardObservers() {
-        NotificationCenter.default.removeObserver(
-            self,
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        NotificationCenter.default.removeObserver(
-            self,
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     func keyboardShowAction(_ keyboardFrame: CGRect) {
@@ -103,10 +94,30 @@ class BaseViewController: UIViewController {
 
     func keyboardFrame(notification: Notification) -> CGRect {
         let userInfo = notification.userInfo
-        let keyboardFrame = userInfo?[
-            UIResponder.keyboardFrameEndUserInfoKey
-        ] as? CGRect
+        let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
         return keyboardFrame ?? .zero
+    }
+
+    // MARK: - Gradient background
+    private func setupWowGradientBackground() {
+        gradientLayer.colors = [
+            UIColor(red: 0.98, green: 0.42, blue: 0.89, alpha: 1).cgColor, // Neon Pink
+            UIColor(red: 0.41, green: 1.0, blue: 0.76, alpha: 1).cgColor,  // Mint Green
+            UIColor(red: 0.42, green: 0.78, blue: 0.98, alpha: 1).cgColor, // Sky Blue
+//            UIColor(red: 1.0, green: 0.77, blue: 0.36, alpha: 1).cgColor    Peachy Orange
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.locations = [0.0, 0.5, 1.0]
+        gradientLayer.cornerRadius = 0
+        gradientLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientLayer, at: 0)
+
+        // Sexy glow effect
+        view.layer.shadowColor = UIColor.systemPink.cgColor
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowRadius = 25
+        view.layer.shadowOffset = CGSize(width: 0, height: 15)
     }
 }
 
@@ -126,4 +137,3 @@ private extension BaseViewController {
         keyboardHideAction(frame)
     }
 }
-

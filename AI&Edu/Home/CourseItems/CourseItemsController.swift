@@ -1,13 +1,13 @@
 //
-//  HomeController.swift
+//  CourseItemsController.swift
 //  AI&Edu
 //
-//  Created by Oybek To’laboyev on 13/04/25.
+//  Created by Oybek To’laboyev on 22/04/25.
 //
 
 import UIKit
 
-class HomeController: BaseViewController {
+class CourseItemsController: BaseViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -15,16 +15,17 @@ class HomeController: BaseViewController {
         tableView.contentInsetAdjustmentBehavior = .always
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
-        tableView.register(CourseCardCell.self)
+        tableView.rowHeight = 86
+        tableView.contentInset.top = 8
+        tableView.register(CourseItemTableViewCell.self)
         return tableView
     }()
 
-    private let viewModel: HomeViewModelProtocol
+    private let viewModel: CourseItemsViewModelProtocol
 
-    init(viewModel: HomeViewModelProtocol) {
+    init(viewModel: CourseItemsViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,7 +35,8 @@ class HomeController: BaseViewController {
     }
 
     override func setupAppearance() {
-        view.backgroundColor = .blue
+        super.setupAppearance()
+        
         let strr = "Courses"
 
         navigationItem.title = strr
@@ -54,14 +56,14 @@ class HomeController: BaseViewController {
     }
 }
 
-extension HomeController:  UITableViewDataSource, UITableViewDelegate {
+extension CourseItemsController:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.courses.count
+        viewModel.courseItems.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = CourseCardCell()
-        cell.configure(with: viewModel.courses[indexPath.row])
+        let cell = CourseItemTableViewCell()
+        cell.configure(with: viewModel.courseItems[indexPath.row])
         return cell
     }
 
@@ -69,3 +71,4 @@ extension HomeController:  UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+

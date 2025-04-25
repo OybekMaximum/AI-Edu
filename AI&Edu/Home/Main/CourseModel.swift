@@ -14,8 +14,3 @@ struct CourseModel {
     let courseItems: [CourseItemModel]
     let level: String
 }
-
-struct CourseItemModel {
-    let title: String
-    let description: String
-}

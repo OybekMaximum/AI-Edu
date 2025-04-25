@@ -8,6 +8,9 @@
 import UIKit
 
 final class CourseCardCell: UITableViewCell {
+    weak var delegate: HomeCoordinatorDelegate?
+    private var courseModel: CourseModel!
+
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +63,7 @@ final class CourseCardCell: UITableViewCell {
         return label
     }()
 
-    let startButton: UIButton = {
+    private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         let strr = "Start"
@@ -69,6 +72,7 @@ final class CourseCardCell: UITableViewCell {
         button.backgroundColor = .systemIndigo
         button.layer.cornerRadius = 16
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -147,7 +151,13 @@ final class CourseCardCell: UITableViewCell {
         ])
     }
 
+    @objc func startButtonTapped() {
+        delegate?.showCourseItems(items: courseModel.courseItems)
+    }
+
     func configure(with model: CourseModel) {
+        courseModel = model
+
         if model.image == "" {
             courseImageView.image = .temp
         } else {

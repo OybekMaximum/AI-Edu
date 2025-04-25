@@ -13,7 +13,7 @@ final class PrepareAppController: BaseViewController {
         let loaderView = UIActivityIndicatorView()
         loaderView.translatesAutoresizingMaskIntoConstraints = false
         loaderView.style = .large
-        loaderView.color = UIColor.gray
+        loaderView.color = .white
         loaderView.isUserInteractionEnabled = false
         return loaderView
     }()
