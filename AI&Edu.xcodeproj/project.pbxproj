@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3F608D231301374EA7711C /* Pods_AI_Edu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */; };
 		AB166ECC2DAD066000E1BEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */; };
 		AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */; };
 		AB166EFA2DAD0D5D00E1BEC7 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EF22DAD0D5D00E1BEC7 /* SettingsController.swift */; };
@@ -61,9 +62,19 @@
 		AB53CC512DB7BA47006D03B3 /* CourseItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */; };
 		AB53CC532DB7BA51006D03B3 /* CourseItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */; };
 		AB53CC552DB7BA5C006D03B3 /* CourseItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */; };
+		ABCEB3292DCCE367004F7E4F /* Alamofire+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3282DCCE367004F7E4F /* Alamofire+Extensions.swift */; };
+		ABCEB32B2DCCE391004F7E4F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB32A2DCCE391004F7E4F /* NetworkError.swift */; };
+		ABCEB32D2DCCE3AA004F7E4F /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB32C2DCCE3AA004F7E4F /* NetworkLogger.swift */; };
+		ABCEB32F2DCCE3D4004F7E4F /* NetworkErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB32E2DCCE3D4004F7E4F /* NetworkErrorInfo.swift */; };
+		ABCEB3322DCCE417004F7E4F /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3312DCCE417004F7E4F /* Mapper.swift */; };
+		ABCEB3342DCCE44B004F7E4F /* NetworkErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */; };
+		ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */; };
+		ABCEB3392DCCE4F0004F7E4F /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI&Edu.debug.xcconfig"; path = "Target Support Files/Pods-AI&Edu/Pods-AI&Edu.debug.xcconfig"; sourceTree = "<group>"; };
+		5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI&Edu.release.xcconfig"; path = "Target Support Files/Pods-AI&Edu/Pods-AI&Edu.release.xcconfig"; sourceTree = "<group>"; };
 		AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB166EC32DAD066000E1BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB166EC82DAD066000E1BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,7 +130,16 @@
 		AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsViewModel.swift; sourceTree = "<group>"; };
 		AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsController.swift; sourceTree = "<group>"; };
 		AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsCoordinator.swift; sourceTree = "<group>"; };
+		ABCEB3282DCCE367004F7E4F /* Alamofire+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extensions.swift"; sourceTree = "<group>"; };
+		ABCEB32A2DCCE391004F7E4F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		ABCEB32C2DCCE3AA004F7E4F /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		ABCEB32E2DCCE3D4004F7E4F /* NetworkErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorInfo.swift; sourceTree = "<group>"; };
+		ABCEB3312DCCE417004F7E4F /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorMapper.swift; sourceTree = "<group>"; };
+		ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDTO.swift; sourceTree = "<group>"; };
+		ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		ABE4D4382D81B7B000CEF53F /* AI&Edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI&Edu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_Edu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +147,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3F608D231301374EA7711C /* Pods_AI_Edu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE294068A0A932C6953AB31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */,
+				5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		409CA8C28DB3AF6F707939CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB166ED32DAD0A0600E1BEC7 /* AI&Edu */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +413,7 @@
 		ABCEB3232DCCE019004F7E4F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ABCEB3302DCCE406004F7E4F /* Mapping */,
 				ABCEB3252DCCE038004F7E4F /* Repository */,
 				ABCEB3242DCCE033004F7E4F /* Remote */,
 			);
@@ -385,6 +424,11 @@
 			isa = PBXGroup;
 			children = (
 				ABCEB3262DCCE045004F7E4F /* Model */,
+				ABCEB3282DCCE367004F7E4F /* Alamofire+Extensions.swift */,
+				ABCEB32C2DCCE3AA004F7E4F /* NetworkLogger.swift */,
+				ABCEB32A2DCCE391004F7E4F /* NetworkError.swift */,
+				ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */,
+				ABCEB32E2DCCE3D4004F7E4F /* NetworkErrorInfo.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -407,8 +451,26 @@
 		ABCEB3272DCCE074004F7E4F /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
+				ABCEB3352DCCE48B004F7E4F /* Common */,
 			);
 			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		ABCEB3302DCCE406004F7E4F /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				ABCEB3312DCCE417004F7E4F /* Mapper.swift */,
+				ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		ABCEB3352DCCE48B004F7E4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		ABE4D42F2D81B7B000CEF53F = {
@@ -416,6 +478,8 @@
 			children = (
 				AB166ED32DAD0A0600E1BEC7 /* AI&Edu */,
 				ABE4D4392D81B7B000CEF53F /* Products */,
+				2BE294068A0A932C6953AB31 /* Pods */,
+				409CA8C28DB3AF6F707939CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,17 +498,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE4D44B2D81B7B100CEF53F /* Build configuration list for PBXNativeTarget "AI&Edu" */;
 			buildPhases = (
+				0F8E5032241702ED7C9BE7B6 /* [CP] Check Pods Manifest.lock */,
 				ABE4D4342D81B7B000CEF53F /* Sources */,
 				ABE4D4352D81B7B000CEF53F /* Frameworks */,
 				ABE4D4362D81B7B000CEF53F /* Resources */,
+				BCABD1351517701C920B0FC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "AI&Edu";
-			packageProductDependencies = (
-			);
 			productName = "AI&Edu";
 			productReference = ABE4D4382D81B7B000CEF53F /* AI&Edu.app */;
 			productType = "com.apple.product-type.application";
@@ -505,6 +569,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F8E5032241702ED7C9BE7B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AI&Edu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCABD1351517701C920B0FC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABE4D4342D81B7B000CEF53F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -519,14 +625,18 @@
 				AB166EFF2DAD0D5D00E1BEC7 /* InputTextField.swift in Sources */,
 				AB3581B12DB109FD00768E3C /* HomeTableViewCell.swift in Sources */,
 				AB53CC512DB7BA47006D03B3 /* CourseItemsViewModel.swift in Sources */,
+				ABCEB32B2DCCE391004F7E4F /* NetworkError.swift in Sources */,
 				AB166F002DAD0D5D00E1BEC7 /* BaseViewController.swift in Sources */,
 				AB166F012DAD0D5D00E1BEC7 /* PrepareAppCoordinator.swift in Sources */,
 				AB166F022DAD0D5D00E1BEC7 /* HomeViewModel.swift in Sources */,
+				ABCEB3322DCCE417004F7E4F /* Mapper.swift in Sources */,
 				AB166F032DAD0D5D00E1BEC7 /* AuthViewModel.swift in Sources */,
 				AB2450B62DBBB1E400CC811C /* StatisticsView.swift in Sources */,
+				ABCEB32D2DCCE3AA004F7E4F /* NetworkLogger.swift in Sources */,
 				AB53CC462DB774DF006D03B3 /* UILabel+Extensions.swift in Sources */,
 				AB53CC4D2DB7B932006D03B3 /* CourseItemTableViewCell.swift in Sources */,
 				AB166F042DAD0D5D00E1BEC7 /* BaseTextField.swift in Sources */,
+				ABCEB3392DCCE4F0004F7E4F /* DomainError.swift in Sources */,
 				AB3581AC2DB0FE7C00768E3C /* CourseModel.swift in Sources */,
 				AB166F052DAD0D5D00E1BEC7 /* TabBarViewModel.swift in Sources */,
 				AB53CC482DB7B67D006D03B3 /* BaseTableViewCell.swift in Sources */,
@@ -545,13 +655,17 @@
 				AB2450B42DBBB1CA00CC811C /* ProfileCardView.swift in Sources */,
 				AB166F0C2DAD0D5D00E1BEC7 /* AppCoordinator.swift in Sources */,
 				AB166F0D2DAD0D5D00E1BEC7 /* TabBarCoordinator.swift in Sources */,
+				ABCEB32F2DCCE3D4004F7E4F /* NetworkErrorInfo.swift in Sources */,
 				AB166F0E2DAD0D5D00E1BEC7 /* SettingsCoordinator.swift in Sources */,
 				AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */,
 				AB166F0F2DAD0D5D00E1BEC7 /* TabBarController.swift in Sources */,
+				ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */,
 				AB166F102DAD0D5D00E1BEC7 /* HomeController.swift in Sources */,
 				AB166F112DAD0D5D00E1BEC7 /* UIViewController+Extensions.swift in Sources */,
+				ABCEB3342DCCE44B004F7E4F /* NetworkErrorMapper.swift in Sources */,
 				AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */,
 				AB166F122DAD0D5D00E1BEC7 /* HomeCoordinator.swift in Sources */,
+				ABCEB3292DCCE367004F7E4F /* Alamofire+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +685,7 @@
 /* Begin XCBuildConfiguration section */
 		ABE4D44C2D81B7B100CEF53F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -598,6 +713,7 @@
 		};
 		ABE4D44D2D81B7B100CEF53F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
