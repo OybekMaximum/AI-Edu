@@ -7,11 +7,9 @@
 
 import UIKit
 
-
 final class CourseItemTableViewCell: BaseTableViewCell {
-
     private let containerView: UIVisualEffectView = {
-        let blurEffect = UIBlurEffect(style: .systemThinMaterialLight)
+        let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
         let view = UIVisualEffectView(effect: blurEffect)
         view.layer.cornerRadius = 16
         view.clipsToBounds = true

@@ -8,6 +8,7 @@
 import UIKit
 
 class StatisticsCardView: UIView {
+    private let statsTitleLabel = UILabel()
     private let statsStackView = UIStackView()
     private let activityTitleLabel = UILabel()
     private let activityStackView = UIStackView()
@@ -44,6 +45,12 @@ class StatisticsCardView: UIView {
 
         [streak, words, accuracy].forEach { statsStackView.addArrangedSubview($0) }
 
+        // stats title
+        statsTitleLabel.text = "Statistics"
+        statsTitleLabel.font = .boldSystemFont(ofSize: 20)
+        statsTitleLabel.textColor = .black
+        statsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+
         // Weekly activity
         activityTitleLabel.text = "Weekly activity"
         activityTitleLabel.font = .boldSystemFont(ofSize: 20)
@@ -53,7 +60,7 @@ class StatisticsCardView: UIView {
         activityStackView.axis = .horizontal
         activityStackView.distribution = .fillEqually
         activityStackView.alignment = .bottom
-        activityStackView.spacing = 8
+        activityStackView.spacing = 2
         activityStackView.translatesAutoresizingMaskIntoConstraints = false
 
         let barHeights = [20, 40, 60, 80, 60, 70, 30]
@@ -65,6 +72,7 @@ class StatisticsCardView: UIView {
         }
 
         // Add all to view
+        addSubview(statsTitleLabel)
         addSubview(statsStackView)
         addSubview(activityTitleLabel)
         addSubview(activityStackView)
@@ -72,7 +80,10 @@ class StatisticsCardView: UIView {
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            statsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            statsTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            statsTitleLabel.leadingAnchor.constraint(equalTo: statsStackView.leadingAnchor),
+
+            statsStackView.topAnchor.constraint(equalTo: statsTitleLabel.bottomAnchor, constant: 16),
             statsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             statsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
 
@@ -155,6 +166,7 @@ class DayActivityBarView: UIView {
         dayLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let stack = UIStackView(arrangedSubviews: [bar, dayLabel])
+        stack.distribution = .fill
         stack.axis = .vertical
         stack.alignment = .center
         stack.spacing = 4
@@ -163,11 +175,13 @@ class DayActivityBarView: UIView {
         addSubview(stack)
 
         NSLayoutConstraint.activate([
-            bar.widthAnchor.constraint(equalToConstant: 20),
             bar.heightAnchor.constraint(equalToConstant: height),
+            bar.leadingAnchor.constraint(equalTo: stack.leadingAnchor),
+            bar.trailingAnchor.constraint(equalTo: stack.trailingAnchor),
             stack.topAnchor.constraint(equalTo: topAnchor),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stack.centerXAnchor.constraint(equalTo: centerXAnchor)
+            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2),
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
         ])
     }
 

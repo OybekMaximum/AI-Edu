@@ -18,6 +18,7 @@ class HomeController: BaseViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        tableView.contentInset.bottom = 16
         tableView.register(CourseCardCell.self)
         return tableView
     }()

@@ -127,7 +127,7 @@ final class CourseCardCell: UITableViewCell {
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 
             courseImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             courseImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),

@@ -39,7 +39,6 @@ class BaseViewController: UIViewController {
     }
 
     func setupAppearance() {
-        navigationItem.hidesBackButton = true
         navigationItem.backButtonTitle = ""
 
         setupWowGradientBackground()
