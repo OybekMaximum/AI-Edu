@@ -136,15 +136,8 @@
 		AB166ED32DAD0A0600E1BEC7 /* AI&Edu */ = {
 			isa = PBXGroup;
 			children = (
-				AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */,
-				AB166ED42DAD0D5D00E1BEC7 /* AppCoordinator.swift */,
-				AB166EE92DAD0D5D00E1BEC7 /* Common */,
-				AB166EF12DAD0D5D00E1BEC7 /* PrepareApp */,
-				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
-				AB166EED2DAD0D5D00E1BEC7 /* Home */,
-				AB166EF52DAD0D5D00E1BEC7 /* Settings */,
-				AB166EF92DAD0D5D00E1BEC7 /* TabBar */,
-				AB166F132DAD0D9200E1BEC7 /* Resources */,
+				ABCEB3222DCCDF50004F7E4F /* Presentation */,
+				ABCEB3232DCCE019004F7E4F /* Data */,
 			);
 			path = "AI&Edu";
 			sourceTree = "<group>";
@@ -363,6 +356,61 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ABCEB3222DCCDF50004F7E4F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */,
+				AB166ED42DAD0D5D00E1BEC7 /* AppCoordinator.swift */,
+				AB166EE92DAD0D5D00E1BEC7 /* Common */,
+				AB166EF12DAD0D5D00E1BEC7 /* PrepareApp */,
+				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
+				AB166EED2DAD0D5D00E1BEC7 /* Home */,
+				AB166EF52DAD0D5D00E1BEC7 /* Settings */,
+				AB166EF92DAD0D5D00E1BEC7 /* TabBar */,
+				AB166F132DAD0D9200E1BEC7 /* Resources */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ABCEB3232DCCE019004F7E4F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ABCEB3252DCCE038004F7E4F /* Repository */,
+				ABCEB3242DCCE033004F7E4F /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ABCEB3242DCCE033004F7E4F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ABCEB3262DCCE045004F7E4F /* Model */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		ABCEB3252DCCE038004F7E4F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ABCEB3262DCCE045004F7E4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABCEB3272DCCE074004F7E4F /* ResponseDTO */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABCEB3272DCCE074004F7E4F /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
 		ABE4D42F2D81B7B000CEF53F = {
 			isa = PBXGroup;
 			children = (
@@ -530,7 +578,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HU2674H87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AI&Edu/Resources/Info.plist";
+				INFOPLIST_FILE = "AI&Edu/Presentation/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -557,7 +605,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6HU2674H87;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "AI&Edu/Resources/Info.plist";
+				INFOPLIST_FILE = "AI&Edu/Presentation/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
