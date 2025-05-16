@@ -1,6 +1,0 @@
-framework module Pods_AI_Edu {
-  umbrella header "Pods-AI&Edu-umbrella.h"
-
-  export *
-  module * { export * }
-}

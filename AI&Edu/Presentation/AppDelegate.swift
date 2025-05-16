@@ -15,6 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         configureDefaultUI()
         launchUI(with: launchOptions)
+
+        let repository = CoursesRepository()
+
+               Task { @MainActor in
+                   do {
+                       let courses = try await repository.getCourses()
+                       print(courses)
+                   } catch {
+                       print("Error occured")
+                   }
+               }
+
+        
         return true
     }
 

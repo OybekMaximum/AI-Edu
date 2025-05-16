@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E3F608D231301374EA7711C /* Pods_AI_Edu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */; };
 		AB166ECC2DAD066000E1BEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */; };
 		AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */; };
 		AB166EFA2DAD0D5D00E1BEC7 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EF22DAD0D5D00E1BEC7 /* SettingsController.swift */; };
@@ -62,6 +61,12 @@
 		AB53CC512DB7BA47006D03B3 /* CourseItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */; };
 		AB53CC532DB7BA51006D03B3 /* CourseItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */; };
 		AB53CC552DB7BA5C006D03B3 /* CourseItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */; };
+		ABA5ADD02DD719BF00097D5A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABA5ADCF2DD719BF00097D5A /* Alamofire */; };
+		ABA5ADD32DD71A0F00097D5A /* CourseResponsDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */; };
+		ABA5ADD52DD71A4E00097D5A /* CourseResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */; };
+		ABA5ADD82DD71A8200097D5A /* CoursesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD62DD71A8200097D5A /* CoursesRepository.swift */; };
+		ABA5ADDB2DD71ADB00097D5A /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD92DD71ADB00097D5A /* BuildConfiguration.swift */; };
+		ABA5ADE02DD73CE100097D5A /* AIWritingTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADDF2DD73CE100097D5A /* AIWritingTaskController.swift */; };
 		ABCEB3292DCCE367004F7E4F /* Alamofire+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3282DCCE367004F7E4F /* Alamofire+Extensions.swift */; };
 		ABCEB32B2DCCE391004F7E4F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB32A2DCCE391004F7E4F /* NetworkError.swift */; };
 		ABCEB32D2DCCE3AA004F7E4F /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB32C2DCCE3AA004F7E4F /* NetworkLogger.swift */; };
@@ -70,11 +75,10 @@
 		ABCEB3342DCCE44B004F7E4F /* NetworkErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */; };
 		ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */; };
 		ABCEB3392DCCE4F0004F7E4F /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */; };
+		ABDA6FFB2DD750A400D4931E /* AIWritingTaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA6FFA2DD750A400D4931E /* AIWritingTaskCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI&Edu.debug.xcconfig"; path = "Target Support Files/Pods-AI&Edu/Pods-AI&Edu.debug.xcconfig"; sourceTree = "<group>"; };
-		5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI&Edu.release.xcconfig"; path = "Target Support Files/Pods-AI&Edu/Pods-AI&Edu.release.xcconfig"; sourceTree = "<group>"; };
 		AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB166EC32DAD066000E1BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB166EC82DAD066000E1BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +134,11 @@
 		AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsViewModel.swift; sourceTree = "<group>"; };
 		AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsController.swift; sourceTree = "<group>"; };
 		AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsCoordinator.swift; sourceTree = "<group>"; };
+		ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseResponsDTOMapper.swift; sourceTree = "<group>"; };
+		ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseResponseDTO.swift; sourceTree = "<group>"; };
+		ABA5ADD62DD71A8200097D5A /* CoursesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesRepository.swift; sourceTree = "<group>"; };
+		ABA5ADD92DD71ADB00097D5A /* BuildConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		ABA5ADDF2DD73CE100097D5A /* AIWritingTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIWritingTaskController.swift; sourceTree = "<group>"; };
 		ABCEB3282DCCE367004F7E4F /* Alamofire+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extensions.swift"; sourceTree = "<group>"; };
 		ABCEB32A2DCCE391004F7E4F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		ABCEB32C2DCCE3AA004F7E4F /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
@@ -138,8 +147,8 @@
 		ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorMapper.swift; sourceTree = "<group>"; };
 		ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDTO.swift; sourceTree = "<group>"; };
 		ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		ABDA6FFA2DD750A400D4931E /* AIWritingTaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIWritingTaskCoordinator.swift; sourceTree = "<group>"; };
 		ABE4D4382D81B7B000CEF53F /* AI&Edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI&Edu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_Edu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,30 +156,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3F608D231301374EA7711C /* Pods_AI_Edu.framework in Frameworks */,
+				ABA5ADD02DD719BF00097D5A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BE294068A0A932C6953AB31 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */,
-				5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		409CA8C28DB3AF6F707939CC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C77D9A219EE22E96FD16700D /* Pods_AI_Edu.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AB166ED32DAD0A0600E1BEC7 /* AI&Edu */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +306,7 @@
 				AB166F1F2DAD0E1B00E1BEC7 /* Fonts */,
 				AB166F142DAD0E1B00E1BEC7 /* Colors.xcassets */,
 				AB166F202DAD0E1B00E1BEC7 /* Images.xcassets */,
+				ABA5ADDA2DD71ADB00097D5A /* Util */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -394,6 +387,39 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		ABA5ADD22DD71A0F00097D5A /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		ABA5ADD72DD71A8200097D5A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ABA5ADD62DD71A8200097D5A /* CoursesRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ABA5ADDA2DD71ADB00097D5A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				ABA5ADD92DD71ADB00097D5A /* BuildConfiguration.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		ABA5ADDC2DD73CB400097D5A /* AIWritingTask */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA6FFA2DD750A400D4931E /* AIWritingTaskCoordinator.swift */,
+				ABA5ADDF2DD73CE100097D5A /* AIWritingTaskController.swift */,
+			);
+			path = AIWritingTask;
+			sourceTree = "<group>";
+		};
 		ABCEB3222DCCDF50004F7E4F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +429,7 @@
 				AB166EF12DAD0D5D00E1BEC7 /* PrepareApp */,
 				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
 				AB166EED2DAD0D5D00E1BEC7 /* Home */,
+				ABA5ADDC2DD73CB400097D5A /* AIWritingTask */,
 				AB166EF52DAD0D5D00E1BEC7 /* Settings */,
 				AB166EF92DAD0D5D00E1BEC7 /* TabBar */,
 				AB166F132DAD0D9200E1BEC7 /* Resources */,
@@ -413,8 +440,8 @@
 		ABCEB3232DCCE019004F7E4F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				ABA5ADD72DD71A8200097D5A /* Repository */,
 				ABCEB3302DCCE406004F7E4F /* Mapping */,
-				ABCEB3252DCCE038004F7E4F /* Repository */,
 				ABCEB3242DCCE033004F7E4F /* Remote */,
 			);
 			path = Data;
@@ -433,13 +460,6 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		ABCEB3252DCCE038004F7E4F /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		ABCEB3262DCCE045004F7E4F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +471,7 @@
 		ABCEB3272DCCE074004F7E4F /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
+				ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */,
 				ABCEB3352DCCE48B004F7E4F /* Common */,
 			);
 			path = ResponseDTO;
@@ -459,6 +480,7 @@
 		ABCEB3302DCCE406004F7E4F /* Mapping */ = {
 			isa = PBXGroup;
 			children = (
+				ABA5ADD22DD71A0F00097D5A /* Course */,
 				ABCEB3312DCCE417004F7E4F /* Mapper.swift */,
 				ABCEB3332DCCE44B004F7E4F /* NetworkErrorMapper.swift */,
 			);
@@ -478,8 +500,6 @@
 			children = (
 				AB166ED32DAD0A0600E1BEC7 /* AI&Edu */,
 				ABE4D4392D81B7B000CEF53F /* Products */,
-				2BE294068A0A932C6953AB31 /* Pods */,
-				409CA8C28DB3AF6F707939CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -498,11 +518,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE4D44B2D81B7B100CEF53F /* Build configuration list for PBXNativeTarget "AI&Edu" */;
 			buildPhases = (
-				0F8E5032241702ED7C9BE7B6 /* [CP] Check Pods Manifest.lock */,
 				ABE4D4342D81B7B000CEF53F /* Sources */,
 				ABE4D4352D81B7B000CEF53F /* Frameworks */,
 				ABE4D4362D81B7B000CEF53F /* Resources */,
-				BCABD1351517701C920B0FC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -537,6 +555,9 @@
 			);
 			mainGroup = ABE4D42F2D81B7B000CEF53F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				ABA5ADCE2DD719BE00097D5A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ABE4D4392D81B7B000CEF53F /* Products */;
 			projectDirPath = "";
@@ -569,48 +590,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0F8E5032241702ED7C9BE7B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AI&Edu-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BCABD1351517701C920B0FC3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AI&Edu/Pods-AI&Edu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		ABE4D4342D81B7B000CEF53F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -629,15 +608,18 @@
 				AB166F002DAD0D5D00E1BEC7 /* BaseViewController.swift in Sources */,
 				AB166F012DAD0D5D00E1BEC7 /* PrepareAppCoordinator.swift in Sources */,
 				AB166F022DAD0D5D00E1BEC7 /* HomeViewModel.swift in Sources */,
+				ABA5ADE02DD73CE100097D5A /* AIWritingTaskController.swift in Sources */,
 				ABCEB3322DCCE417004F7E4F /* Mapper.swift in Sources */,
 				AB166F032DAD0D5D00E1BEC7 /* AuthViewModel.swift in Sources */,
 				AB2450B62DBBB1E400CC811C /* StatisticsView.swift in Sources */,
+				ABA5ADD82DD71A8200097D5A /* CoursesRepository.swift in Sources */,
 				ABCEB32D2DCCE3AA004F7E4F /* NetworkLogger.swift in Sources */,
 				AB53CC462DB774DF006D03B3 /* UILabel+Extensions.swift in Sources */,
 				AB53CC4D2DB7B932006D03B3 /* CourseItemTableViewCell.swift in Sources */,
 				AB166F042DAD0D5D00E1BEC7 /* BaseTextField.swift in Sources */,
 				ABCEB3392DCCE4F0004F7E4F /* DomainError.swift in Sources */,
 				AB3581AC2DB0FE7C00768E3C /* CourseModel.swift in Sources */,
+				ABDA6FFB2DD750A400D4931E /* AIWritingTaskCoordinator.swift in Sources */,
 				AB166F052DAD0D5D00E1BEC7 /* TabBarViewModel.swift in Sources */,
 				AB53CC482DB7B67D006D03B3 /* BaseTableViewCell.swift in Sources */,
 				AB166F062DAD0D5D00E1BEC7 /* AuthCoordinator.swift in Sources */,
@@ -649,8 +631,11 @@
 				AB53CC532DB7BA51006D03B3 /* CourseItemsController.swift in Sources */,
 				AB166F092DAD0D5D00E1BEC7 /* SettingsViewModel.swift in Sources */,
 				AB53CC552DB7BA5C006D03B3 /* CourseItemsCoordinator.swift in Sources */,
+				ABA5ADD52DD71A4E00097D5A /* CourseResponseDTO.swift in Sources */,
 				AB166F0A2DAD0D5D00E1BEC7 /* PrepareAppViewModel.swift in Sources */,
 				AB2450B22DBBB1A500CC811C /* BaseCardView.swift in Sources */,
+				ABA5ADDB2DD71ADB00097D5A /* BuildConfiguration.swift in Sources */,
+				ABA5ADD32DD71A0F00097D5A /* CourseResponsDTOMapper.swift in Sources */,
 				AB166F0B2DAD0D5D00E1BEC7 /* Coordinator.swift in Sources */,
 				AB2450B42DBBB1CA00CC811C /* ProfileCardView.swift in Sources */,
 				AB166F0C2DAD0D5D00E1BEC7 /* AppCoordinator.swift in Sources */,
@@ -685,7 +670,6 @@
 /* Begin XCBuildConfiguration section */
 		ABE4D44C2D81B7B100CEF53F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55B5B848067AD2879B75B3E8 /* Pods-AI&Edu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -713,7 +697,6 @@
 		};
 		ABE4D44D2D81B7B100CEF53F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FD1CA557C44F08559E8074C /* Pods-AI&Edu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -880,6 +863,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABA5ADCE2DD719BE00097D5A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABA5ADCF2DD719BF00097D5A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABA5ADCE2DD719BE00097D5A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABE4D4302D81B7B000CEF53F /* Project object */;
 }
