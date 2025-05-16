@@ -20,13 +20,6 @@ final class AppCoordinator: BaseCoordinator {
         prepareApp()
     }
 
-    private func showWelcomePage() {
-        removeChildCoordinators()
-//
-//        let coordinator = WelcomeCoordinator(window: window)
-//        start(coordinator: coordinator)
-    }
-
     func prepareApp() {
         removeChildCoordinators()
 
@@ -36,13 +29,21 @@ final class AppCoordinator: BaseCoordinator {
 
     func launchApp() {
 //        showAuthPage()
-        showMainPage()
+//        showMainPage()
+        showWelcomePage()
     }
 
     func showAuthPage() {
         removeChildCoordinators()
 
         let coordinator = AuthCoordinator(window: window)
+        start(coordinator: coordinator)
+    }
+
+    func showWelcomePage() {
+        removeChildCoordinators()
+
+        let coordinator = FirstWelcomeCoordinator(window: window)
         start(coordinator: coordinator)
     }
 

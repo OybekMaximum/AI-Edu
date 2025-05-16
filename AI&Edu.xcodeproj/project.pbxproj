@@ -76,6 +76,9 @@
 		ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */; };
 		ABCEB3392DCCE4F0004F7E4F /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */; };
 		ABDA6FFB2DD750A400D4931E /* AIWritingTaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA6FFA2DD750A400D4931E /* AIWritingTaskCoordinator.swift */; };
+		ABDA6FFE2DD7570F00D4931E /* FirstWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA6FFD2DD7570F00D4931E /* FirstWelcomeController.swift */; };
+		ABDA70002DD7573B00D4931E /* SecondWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA6FFF2DD7573B00D4931E /* SecondWelcomeController.swift */; };
+		ABDA70022DD758A400D4931E /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA70012DD758A400D4931E /* WelcomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +151,9 @@
 		ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDTO.swift; sourceTree = "<group>"; };
 		ABCEB3382DCCE4F0004F7E4F /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		ABDA6FFA2DD750A400D4931E /* AIWritingTaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIWritingTaskCoordinator.swift; sourceTree = "<group>"; };
+		ABDA6FFD2DD7570F00D4931E /* FirstWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWelcomeController.swift; sourceTree = "<group>"; };
+		ABDA6FFF2DD7573B00D4931E /* SecondWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWelcomeController.swift; sourceTree = "<group>"; };
+		ABDA70012DD758A400D4931E /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		ABE4D4382D81B7B000CEF53F /* AI&Edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI&Edu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -428,6 +434,7 @@
 				AB166EE92DAD0D5D00E1BEC7 /* Common */,
 				AB166EF12DAD0D5D00E1BEC7 /* PrepareApp */,
 				AB166ED82DAD0D5D00E1BEC7 /* Auth */,
+				ABDA6FFC2DD7533D00D4931E /* WelcomPage */,
 				AB166EED2DAD0D5D00E1BEC7 /* Home */,
 				ABA5ADDC2DD73CB400097D5A /* AIWritingTask */,
 				AB166EF52DAD0D5D00E1BEC7 /* Settings */,
@@ -493,6 +500,16 @@
 				ABCEB3362DCCE49B004F7E4F /* ErrorResponseDTO.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		ABDA6FFC2DD7533D00D4931E /* WelcomPage */ = {
+			isa = PBXGroup;
+			children = (
+				ABDA70012DD758A400D4931E /* WelcomeCoordinator.swift */,
+				ABDA6FFD2DD7570F00D4931E /* FirstWelcomeController.swift */,
+				ABDA6FFF2DD7573B00D4931E /* SecondWelcomeController.swift */,
+			);
+			path = WelcomPage;
 			sourceTree = "<group>";
 		};
 		ABE4D42F2D81B7B000CEF53F = {
@@ -625,6 +642,7 @@
 				AB166F062DAD0D5D00E1BEC7 /* AuthCoordinator.swift in Sources */,
 				AB53CC4F2DB7BA2A006D03B3 /* CourseItemModel.swift in Sources */,
 				AB166F072DAD0D5D00E1BEC7 /* BaseButton.swift in Sources */,
+				ABDA6FFE2DD7570F00D4931E /* FirstWelcomeController.swift in Sources */,
 				AB166F082DAD0D5D00E1BEC7 /* PrepareAppController.swift in Sources */,
 				AB2450B82DBBB4E800CC811C /* AchievementsCardView.swift in Sources */,
 				AB3581AE2DB0FFF600768E3C /* UITableView+Extension.swift in Sources */,
@@ -633,6 +651,7 @@
 				AB53CC552DB7BA5C006D03B3 /* CourseItemsCoordinator.swift in Sources */,
 				ABA5ADD52DD71A4E00097D5A /* CourseResponseDTO.swift in Sources */,
 				AB166F0A2DAD0D5D00E1BEC7 /* PrepareAppViewModel.swift in Sources */,
+				ABDA70022DD758A400D4931E /* WelcomeCoordinator.swift in Sources */,
 				AB2450B22DBBB1A500CC811C /* BaseCardView.swift in Sources */,
 				ABA5ADDB2DD71ADB00097D5A /* BuildConfiguration.swift in Sources */,
 				ABA5ADD32DD71A0F00097D5A /* CourseResponsDTOMapper.swift in Sources */,
@@ -642,6 +661,7 @@
 				AB166F0D2DAD0D5D00E1BEC7 /* TabBarCoordinator.swift in Sources */,
 				ABCEB32F2DCCE3D4004F7E4F /* NetworkErrorInfo.swift in Sources */,
 				AB166F0E2DAD0D5D00E1BEC7 /* SettingsCoordinator.swift in Sources */,
+				ABDA70002DD7573B00D4931E /* SecondWelcomeController.swift in Sources */,
 				AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */,
 				AB166F0F2DAD0D5D00E1BEC7 /* TabBarController.swift in Sources */,
 				ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */,
