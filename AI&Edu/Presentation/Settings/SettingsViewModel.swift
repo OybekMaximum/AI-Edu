@@ -8,9 +8,13 @@
 import Foundation
 
 protocol SettingsViewModelProtocol: AnyObject {
-
+    func logout()
 }
 
 class SettingsViewModel: SettingsViewModelProtocol {
-    
+    weak var delegate: SettingsCoordinatorDelegate?
+
+    func logout() {
+        delegate?.logout()
+    }
 }

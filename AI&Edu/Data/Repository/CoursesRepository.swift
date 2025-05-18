@@ -11,12 +11,11 @@ import Alamofire
 final class CoursesRepository {
     private let session = Session.shared
     private let baseUrl = BuildConfiguration.shared.apiBaseUrl
-    private lazy var url = "\(baseUrl)/api/courses"
 
     func getCourses() async throws -> [CourseModel] {
         return try await session
             .request(
-                url,
+                baseUrl + "/api/courses",
                 method: .get
             )
             .validate()
@@ -27,29 +26,24 @@ final class CoursesRepository {
             .result
             .get()
     }
-}
 
-//    func confirmSignIn(phone: String, confirmationId: String, confirmationCode: String) async throws -> OAuthCredential {
-//        let appVersion = Bundle.main.appVersion
-//        let parameters = [
-//            "phone": phone,
-//            "otp_id": confirmationId,
-//            "code": confirmationCode,
-//            "app_version": appVersion
-//        ]
-//        return try await session
-//            .request(
-//                "\(url)/sign-in/verify",
-//                method: .post,
-//                parameters: parameters,
-//                encoder: JSONParameterEncoder.default
-//            )
-//            .validate()
-//            .serializingDecodable(OAuthCredentialResponseDTO.self)
-//            .response
-//            .map { OAuthCredentialResponseDTOMapper().map($0) }
-//            .mapNetworkError()
-//            .result
-//            .get()
-//    }
-//}
+    func getCourseById(courseId: Int) async throws -> [CourseItemModel] {
+        let parameters = [
+            "courseId": courseId,
+        ]
+
+        return try await session
+            .request(
+                baseUrl + "/api/courses/\(courseId)/items",
+                method: .get,
+                parameters: parameters
+            )
+            .validate()
+            .serializingDecodable([VideoLessonResponseDTO].self)
+            .response
+            .map { $0.map { VideoLessonResponseDTOMapper().map($0) } }
+            .mapNetworkError()
+            .result
+            .get()
+    }
+}

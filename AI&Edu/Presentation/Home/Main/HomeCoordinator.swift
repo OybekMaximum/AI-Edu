@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeCoordinatorDelegate: CoordinatorDelegate {
-    func showCourseItems(items: [CourseItemModel])
+    func showCourseItems(courseId: Int)
 }
 
 class HomeCoordinator: BaseCoordinator {
@@ -22,8 +22,8 @@ class HomeCoordinator: BaseCoordinator {
 }
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
-    func showCourseItems(items: [CourseItemModel]) {
-        let coordinator = CourseItemsCoordinator(courseItems: items)
+    func showCourseItems(courseId: Int) {
+        let coordinator = CourseItemsCoordinator(courseId: courseId)
         coordinator.navigationController = navigationController
         start(coordinator: coordinator)
     }

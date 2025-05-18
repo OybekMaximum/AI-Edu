@@ -9,27 +9,23 @@ import Foundation
 
 struct CourseResponseDTOMapper: Mapper {
     func map(_ source: CourseResponseDTO) -> CourseModel {
-        let videoLessonMapper = VideoLessonResponseDTOMapper()
 
         return CourseModel(
-            title: source.title ?? "No title",
-            description: source.description ?? "No description",
+            id: source.id ?? 0,
+            title: source.title ?? "",
+            description: source.description ?? "",
             image: "",
-            courseItems: source.videoLessons.map { videoLessonMapper.map($0) },
-            level: ""
+            level: ["Beginner", "Intermediate", "Advanced", "Elementary"].randomElement() ?? ""
         )
     }
 }
 
 struct VideoLessonResponseDTOMapper: Mapper {
     func map(_ source: VideoLessonResponseDTO) -> CourseItemModel {
-        let courseMapper = CourseResponseDTOMapper()
 
         return CourseItemModel(
             title: source.title ?? "No title",
-            description: "No description",
-            isCompleted: false,
-            courseModel: source.course == nil ? nil : courseMapper.map(source.course!),
+            itemType: source.itemType ?? "No type",
             videoURL: source.videoUrl
         )
     }

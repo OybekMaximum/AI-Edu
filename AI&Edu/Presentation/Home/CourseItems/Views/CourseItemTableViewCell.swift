@@ -122,7 +122,7 @@ final class CourseItemTableViewCell: BaseTableViewCell {
 
     func configure(with course: CourseItemModel) {
         titleLabel.text = course.title.isEmpty ? "Title is empty" : course.title
-        subtitleLabel.text = course.description.isEmpty ? "Subtitle is empty" : course.description
-        completedBadge.isHidden = !(course.isCompleted ?? false)
+        subtitleLabel.text = course.itemType.isEmpty ? "Subtitle is empty" : course.itemType
+        completedBadge.isHidden = true
     }
 }

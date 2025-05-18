@@ -9,6 +9,7 @@ import UIKit
 
 protocol AuthCoordinatorDelegate: AnyObject {
     func showMain()
+    func showOnboarding()
 }
 
 class AuthCoordinator: BaseCoordinator {
@@ -42,5 +43,9 @@ extension AuthCoordinator: AuthCoordinatorDelegate {
 
     func showMain() {
         appCoordinator?.showMainPage()
+    }
+
+    func showOnboarding() {
+        appCoordinator?.showWelcomePage()
     }
 }

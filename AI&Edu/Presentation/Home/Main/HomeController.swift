@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeController: BaseViewController {
     private lazy var tableView: UITableView = {
@@ -24,14 +25,27 @@ class HomeController: BaseViewController {
     }()
 
     private let viewModel: HomeViewModelProtocol
+    private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+
+        viewModel.reloadTableView
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                self.tableView.reloadData()
+            }
+            .store(in: &cancellables)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.getCourses()
     }
 
     override func setupAppearance() {

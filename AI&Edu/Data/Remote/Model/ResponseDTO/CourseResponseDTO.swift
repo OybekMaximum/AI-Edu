@@ -11,26 +11,26 @@ struct CourseResponseDTO: Decodable {
     let id: Int?
     let title: String?
     let description: String?
-    let videoLessons: [VideoLessonResponseDTO]
+//    let videoLessons: [VideoLessonResponseDTO]
 
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case description
-        case videoLessons
+//        case videoLessons
     }
 }
 
 struct VideoLessonResponseDTO: Decodable {
     let id: Int?
     let title: String?
-    let course: CourseResponseDTO?
+    let itemType: String?
     let videoUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case id
         case title
-        case course
-        case videoUrl
+        case itemType
+        case videoUrl = "content"
     }
 }

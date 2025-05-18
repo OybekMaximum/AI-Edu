@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Combine
 
 protocol HomeViewModelProtocol: AnyObject {
     var courses: [CourseModel] { get }
     var delegate: HomeCoordinatorDelegate? { get set }
+    var reloadTableView: PassthroughSubject<Void, Never> { get }
 
-    func showCourses(items: [CourseItemModel])
+    func getCourses()
+    func showCourses(courseId: Int)
 }
 
 class HomeViewModel: HomeViewModelProtocol {
+    var reloadTableView: PassthroughSubject<Void, Never> = .init()
     weak var delegate: HomeCoordinatorDelegate?
 
 //    let courses: [CourseModel] = [
@@ -41,23 +45,23 @@ class HomeViewModel: HomeViewModelProtocol {
 //        ], level: ""),
 //    ]
 
-    let courses: [CourseModel] = [
-        .init(
-            title: "title",
-            description: "description",
-            image: "",
-            courseItems: [.init(
-                title: "lesson title",
-                description: "lesson description",
-                isCompleted: false,
-                courseModel: nil,
-                videoURL: ""
-            )],
-            level: "Zero"
-        )
-    ]
+    var courses: [CourseModel] = []
 
-    func showCourses(items: [CourseItemModel]) {
-        delegate?.showCourseItems(items: items)
+    func getCourses() {
+        let repository = CoursesRepository()
+
+        Task { @MainActor in
+            do {
+                let courses = try await repository.getCourses()
+                self.courses = courses
+                reloadTableView.send()
+            } catch {
+                print("CoursesRepository Error occured")
+            }
+        }
+    }
+
+    func showCourses(courseId: Int) {
+        delegate?.showCourseItems(courseId: courseId)
     }
 }

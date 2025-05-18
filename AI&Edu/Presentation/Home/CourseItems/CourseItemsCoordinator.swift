@@ -8,15 +8,15 @@
 import Foundation
 
 class CourseItemsCoordinator: BaseCoordinator {
-    let courseItems: [CourseItemModel]
+    let courseId: Int
 
-    init(courseItems: [CourseItemModel]) {
-        self.courseItems = courseItems
+    init(courseId: Int) {
+        self.courseId = courseId
         super.init()
     }
 
     override func start() {
-        let viewModel = CourseItemsViewModel(courseItems: courseItems)
+        let viewModel = CourseItemsViewModel(courseId: courseId)
         let controller = CourseItemsController(viewModel: viewModel)
         
         navigationController.pushViewController(controller, animated: true)

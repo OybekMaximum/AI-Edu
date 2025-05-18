@@ -53,7 +53,12 @@ class SettingsController: BaseViewController {
         super.initialize()
 
         // Configure the ProfileCardView with sample data
-        profileCardView.configure(with: .iconBook, loginText: "user123")
+        profileCardView.configure(with: .iconBook, loginText: BuildConfiguration.shared.userName ?? "UNKNOWN USER")
+
+
+        profileCardView.onLogoutTapped = { [weak self] in
+            self?.viewModel.logout()
+        }
     }
 
     override func setupAppearance() {

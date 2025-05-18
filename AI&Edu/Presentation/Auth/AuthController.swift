@@ -197,6 +197,14 @@ final class AuthViewController: BaseViewController {
         setConstraints()
         updateUIForAuthState(animated: false)
         setupTextFieldNotifications() // Add this
+
+        viewModel.showSignIn
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                self.skipButtonTapped()
+                self.clear()
+            }
+            .store(in: &cancellables)
     }
 
     deinit {
@@ -304,6 +312,7 @@ final class AuthViewController: BaseViewController {
     @objc private func skipButtonTapped() {
         isInSignUpState.toggle()
         updateUIForAuthState(animated: true)
+        clear()
     }
 
     private func updateUIForAuthState(animated: Bool) {
@@ -373,15 +382,30 @@ final class AuthViewController: BaseViewController {
 
 // MARK: - Private methods
 private extension AuthViewController {
-    @objc func doneButtonTapped() {
-        if isInSignUpState {
-            print("Attempting Sign Up...")
-            // viewModel.signUp(...)
-        } else {
-            print("Attempting Sign In...")
-            // viewModel.signIn(...)
+    func clear() {
+        [loginTextField, emailTextField, passwordTextField, reEnterPasswordTextField].forEach { textfield in
+            textfield.text = ""
         }
-        viewModel.showMain()
+    }
+
+    @objc func doneButtonTapped() {
+        guard !(loginTextField.text ?? "").isEmpty && !(passwordTextField.text ?? "").isEmpty else {
+            return
+        }
+
+        if isInSignUpState {
+            guard passwordTextField.text == reEnterPasswordTextField.text else {
+                return
+            }
+
+            viewModel.signUp(login: loginTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+
+            clear()
+
+        } else {
+
+            viewModel.signIn(login: loginTextField.text ?? "", password: passwordTextField.text ?? "")
+        }
     }
 }
 

@@ -61,6 +61,9 @@
 		AB53CC512DB7BA47006D03B3 /* CourseItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */; };
 		AB53CC532DB7BA51006D03B3 /* CourseItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */; };
 		AB53CC552DB7BA5C006D03B3 /* CourseItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */; };
+		AB72C48F2DD9FCBD0040E19D /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72C48E2DD9FCBD0040E19D /* AuthRepository.swift */; };
+		AB72C4912DDA044C0040E19D /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72C4902DDA044C0040E19D /* TokenDTO.swift */; };
+		AB72C4932DDA04A80040E19D /* TokenResponseDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72C4922DDA04A80040E19D /* TokenResponseDTOMapper.swift */; };
 		ABA5ADD02DD719BF00097D5A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABA5ADCF2DD719BF00097D5A /* Alamofire */; };
 		ABA5ADD32DD71A0F00097D5A /* CourseResponsDTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */; };
 		ABA5ADD52DD71A4E00097D5A /* CourseResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */; };
@@ -137,6 +140,9 @@
 		AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsViewModel.swift; sourceTree = "<group>"; };
 		AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsController.swift; sourceTree = "<group>"; };
 		AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsCoordinator.swift; sourceTree = "<group>"; };
+		AB72C48E2DD9FCBD0040E19D /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		AB72C4902DDA044C0040E19D /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
+		AB72C4922DDA04A80040E19D /* TokenResponseDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponseDTOMapper.swift; sourceTree = "<group>"; };
 		ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseResponsDTOMapper.swift; sourceTree = "<group>"; };
 		ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseResponseDTO.swift; sourceTree = "<group>"; };
 		ABA5ADD62DD71A8200097D5A /* CoursesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesRepository.swift; sourceTree = "<group>"; };
@@ -397,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA5ADD12DD71A0F00097D5A /* CourseResponsDTOMapper.swift */,
+				AB72C4922DDA04A80040E19D /* TokenResponseDTOMapper.swift */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -405,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA5ADD62DD71A8200097D5A /* CoursesRepository.swift */,
+				AB72C48E2DD9FCBD0040E19D /* AuthRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -479,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA5ADD42DD71A4E00097D5A /* CourseResponseDTO.swift */,
+				AB72C4902DDA044C0040E19D /* TokenDTO.swift */,
 				ABCEB3352DCCE48B004F7E4F /* Common */,
 			);
 			path = ResponseDTO;
@@ -623,6 +632,7 @@
 				AB53CC512DB7BA47006D03B3 /* CourseItemsViewModel.swift in Sources */,
 				ABCEB32B2DCCE391004F7E4F /* NetworkError.swift in Sources */,
 				AB166F002DAD0D5D00E1BEC7 /* BaseViewController.swift in Sources */,
+				AB72C4932DDA04A80040E19D /* TokenResponseDTOMapper.swift in Sources */,
 				AB166F012DAD0D5D00E1BEC7 /* PrepareAppCoordinator.swift in Sources */,
 				AB166F022DAD0D5D00E1BEC7 /* HomeViewModel.swift in Sources */,
 				ABA5ADE02DD73CE100097D5A /* AIWritingTaskController.swift in Sources */,
@@ -641,10 +651,12 @@
 				AB53CC482DB7B67D006D03B3 /* BaseTableViewCell.swift in Sources */,
 				AB166F062DAD0D5D00E1BEC7 /* AuthCoordinator.swift in Sources */,
 				AB53CC4F2DB7BA2A006D03B3 /* CourseItemModel.swift in Sources */,
+				AB72C4912DDA044C0040E19D /* TokenDTO.swift in Sources */,
 				AB166F072DAD0D5D00E1BEC7 /* BaseButton.swift in Sources */,
 				ABDA6FFE2DD7570F00D4931E /* FirstWelcomeController.swift in Sources */,
 				AB166F082DAD0D5D00E1BEC7 /* PrepareAppController.swift in Sources */,
 				AB2450B82DBBB4E800CC811C /* AchievementsCardView.swift in Sources */,
+				AB72C48F2DD9FCBD0040E19D /* AuthRepository.swift in Sources */,
 				AB3581AE2DB0FFF600768E3C /* UITableView+Extension.swift in Sources */,
 				AB53CC532DB7BA51006D03B3 /* CourseItemsController.swift in Sources */,
 				AB166F092DAD0D5D00E1BEC7 /* SettingsViewModel.swift in Sources */,

@@ -9,8 +9,6 @@ import Foundation
 
 struct CourseItemModel {
     let title: String
-    let description: String
-    let isCompleted: Bool?
-    let courseModel: CourseModel?
+    let itemType: String
     let videoURL: String?
 }

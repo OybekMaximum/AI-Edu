@@ -152,7 +152,7 @@ final class CourseCardCell: UITableViewCell {
     }
 
     @objc func startButtonTapped() {
-        delegate?.showCourseItems(items: courseModel.courseItems)
+        delegate?.showCourseItems(courseId: courseModel.id)
     }
 
     func configure(with model: CourseModel) {
@@ -167,7 +167,7 @@ final class CourseCardCell: UITableViewCell {
         if model.level == "" {
             levelLabel.isHidden = true
         } else {
-            levelLabel.setTextWithPadding(model.title)
+            levelLabel.setTextWithPadding(model.level)
         }
 
         let titleStrr = "Conversational English"
@@ -176,7 +176,7 @@ final class CourseCardCell: UITableViewCell {
         let subtitleStrr = "Learn to communicate freely on everyday topics"
         subtitleLabel.text = model.description == "" ? subtitleStrr : model.description
 
-        let strr = "lessons"
-        lessonsLabel.text = "\(model.courseItems.count) \(strr)"
+        let strr = "Lessons"
+        lessonsLabel.text = strr
     }
 }
