@@ -28,9 +28,9 @@ final class AppCoordinator: BaseCoordinator {
     }
 
     func launchApp() {
-//        showAuthPage()
+        showAuthPage()
 //        showMainPage()
-        showWelcomePage()
+//        showWelcomePage()
     }
 
     func showAuthPage() {

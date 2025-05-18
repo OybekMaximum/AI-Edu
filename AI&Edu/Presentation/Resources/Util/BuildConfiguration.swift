@@ -11,6 +11,6 @@ class BuildConfiguration {
     static let shared = BuildConfiguration()
 
     var apiBaseUrl: String {
-        "http://localhost:7777"
+        "http://51.20.3.10:7777"
     }
 }
