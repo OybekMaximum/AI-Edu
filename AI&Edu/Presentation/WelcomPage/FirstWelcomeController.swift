@@ -32,7 +32,7 @@ class FirstWelcomeController: BaseViewController {
     private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Start your English learning journey with a personalized program"
-        label.textColor = .lightGray
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0

@@ -9,14 +9,8 @@ import UIKit
 import WebKit
 
 class AIWritingTaskController: BaseViewController {
-    weak var coordinatorDelegate: FirstWelcomeCoordinatorDelegate?
     var webView: WKWebView!
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinatorDelegate?.showHome()
-    }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()

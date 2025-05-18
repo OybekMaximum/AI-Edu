@@ -27,6 +27,7 @@ final class CoursesRepository {
             .result
             .get()
     }
+}
 
 //    func confirmSignIn(phone: String, confirmationId: String, confirmationCode: String) async throws -> OAuthCredential {
 //        let appVersion = Bundle.main.appVersion
@@ -51,4 +52,4 @@ final class CoursesRepository {
 //            .result
 //            .get()
 //    }
-}
+//}

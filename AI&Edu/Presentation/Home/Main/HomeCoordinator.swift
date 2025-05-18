@@ -23,12 +23,15 @@ class HomeCoordinator: BaseCoordinator {
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
     func showCourseItems(items: [CourseItemModel]) {
-//        let coordinator = CourseItemsCoordinator(courseItems: items)
-//        coordinator.navigationController = navigationController
-//        start(coordinator: coordinator)
-
-        let coordinator = AIWritingTaskCoordinator()
+        let coordinator = CourseItemsCoordinator(courseItems: items)
         coordinator.navigationController = navigationController
         start(coordinator: coordinator)
     }
 }
+
+
+//        let coordinator = AIWritingTaskCoordinator()
+//        coordinator.navigationController = navigationController
+//        start(coordinator: coordinator)
+//    }
+//}

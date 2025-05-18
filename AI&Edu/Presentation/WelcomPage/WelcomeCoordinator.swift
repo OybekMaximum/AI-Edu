@@ -29,7 +29,6 @@ class FirstWelcomeCoordinator: BaseCoordinator {
         self.navigationController = navigationController
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-
     }
 }
 
@@ -41,7 +40,7 @@ extension FirstWelcomeCoordinator: FirstWelcomeCoordinatorDelegate {
     }
 
     func showWritingTest() {
-        let controller = AIWritingTaskController()
+        let controller = AICheckKnowledgeController()
         controller.coordinatorDelegate = self
         navigationController.present(controller, animated: true)
     }
@@ -59,5 +58,45 @@ extension FirstWelcomeCoordinator {
         }
 
         return parentCoordinator as? AppCoordinator
+    }
+}
+
+
+import WebKit
+
+class AICheckKnowledgeController: BaseViewController {
+    weak var coordinatorDelegate: FirstWelcomeCoordinatorDelegate?
+    var webView: WKWebView!
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinatorDelegate?.showHome()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupWebView()
+        loadURL()
+    }
+
+    func setupWebView() {
+        webView = WKWebView(frame: view.bounds)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(webView)
+    }
+
+    func loadURL() {
+        if let url = URL(string: "https://www.ambitiousimpact.com/quiz") {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
+    }
+
+    override func addSubviews() {
+
+    }
+
+    override func setConstraints() {
+
     }
 }

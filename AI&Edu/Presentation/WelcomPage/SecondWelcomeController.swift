@@ -20,7 +20,7 @@ class SecondWelcomeController: BaseViewController {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "AI level assessment"
+        label.text = "Discover Your Career!"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textAlignment = .center
@@ -30,8 +30,8 @@ class SecondWelcomeController: BaseViewController {
 
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Let's determine your writing level of English"
-        label.textColor = .lightGray
+        label.text = "Take a free test to find the career path that suits you."
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -41,7 +41,7 @@ class SecondWelcomeController: BaseViewController {
 
     private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Start writing", for: .normal)
+        button.setTitle("Start AI Test", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor.systemBlue
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -81,7 +81,7 @@ class SecondWelcomeController: BaseViewController {
 
             illustrationImageView.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 32),
             illustrationImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            illustrationImageView.heightAnchor.constraint(equalToConstant: 240),
+            illustrationImageView.heightAnchor.constraint(equalToConstant: 340),
             illustrationImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
 
             titleLabel.topAnchor.constraint(equalTo: illustrationImageView.bottomAnchor, constant: 32),
@@ -92,7 +92,7 @@ class SecondWelcomeController: BaseViewController {
             subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             subtitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
 
-            startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32),
+            startButton.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 32),
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startButton.widthAnchor.constraint(equalToConstant: 160),
             startButton.heightAnchor.constraint(equalToConstant: 48)
