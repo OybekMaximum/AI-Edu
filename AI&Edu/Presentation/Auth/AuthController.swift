@@ -24,9 +24,9 @@ final class AuthViewController: BaseViewController {
         return view
     }()
 
-    private lazy var skipButton: UIButton = {
+    private lazy var changeAuthTypeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Sign In", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(UIColor.systemBlue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -175,7 +175,7 @@ final class AuthViewController: BaseViewController {
 
     private var cancellables = Set<AnyCancellable>()
     private let viewModel: AuthViewModelProtocol
-    private var isInSignUpState = true
+    private var isInSignUpState = false
 
     init(viewModel: AuthViewModelProtocol) {
         self.viewModel = viewModel
@@ -219,7 +219,7 @@ final class AuthViewController: BaseViewController {
             textFieldsStackView.addArrangedSubview($0)
         }
 
-        [skipButton, logoImageView, authTitleLabel, authDescriptionLabel,
+        [changeAuthTypeButton, logoImageView, authTitleLabel, authDescriptionLabel,
          textFieldsStackView, doneButton, privacyDescriptionTextView].forEach {
             contentView.addSubview($0)
         }
@@ -249,8 +249,8 @@ final class AuthViewController: BaseViewController {
         ])
 
         NSLayoutConstraint.activate([
-            skipButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
-            skipButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            changeAuthTypeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
+            changeAuthTypeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 
             logoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
             logoImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -317,7 +317,7 @@ final class AuthViewController: BaseViewController {
 
     private func updateUIForAuthState(animated: Bool) {
         let duration = animated ? 0.3 : 0.0
-        skipButton.setTitle(isInSignUpState ? "Sign In" : "Sign Up", for: .normal)
+        changeAuthTypeButton.setTitle(isInSignUpState ? "Sign In" : "Sign Up", for: .normal)
         authTitleLabel.text = isInSignUpState ? "Enter your informations" : "Welcome Back!"
         authDescriptionLabel.text = isInSignUpState ? "To register and access your profile!" : "Sign in to continue."
         doneButton.setTitle(isInSignUpState ? "Done" : "Sign In", for: .normal)

@@ -67,7 +67,7 @@ final class PrepareAppController: BaseViewController {
             loaderView.heightAnchor.constraint(equalTo: loaderView.widthAnchor),
 
             retryButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            retryButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            retryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             retryButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -100),
             retryButton.heightAnchor.constraint(equalToConstant: 80)
         ])
