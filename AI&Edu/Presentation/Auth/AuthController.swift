@@ -2,7 +2,7 @@
 //  AuthController.swift
 //  AI&Edu
 //
-//  Created by Oybek To’laboyev on 14/04/25.
+//  Created by Oybek To'laboyev on 14/04/25.
 //
 
 import UIKit
@@ -173,6 +173,14 @@ final class AuthViewController: BaseViewController {
         return textView
     }()
 
+    private let loaderView: UIActivityIndicatorView = {
+        let loaderView = UIActivityIndicatorView()
+        loaderView.translatesAutoresizingMaskIntoConstraints = false
+        loaderView.style = .large
+        loaderView.hidesWhenStopped = true
+        return loaderView
+    }()
+
     private var cancellables = Set<AnyCancellable>()
     private let viewModel: AuthViewModelProtocol
     private var isInSignUpState = false
@@ -180,6 +188,26 @@ final class AuthViewController: BaseViewController {
     init(viewModel: AuthViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
+        viewModel.showError
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.showErrorAlert(message: errorMessage)
+            }
+            .store(in: &cancellables)
+            
+        viewModel.isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                if isLoading {
+                    self?.loaderView.startAnimating()
+                    self?.doneButton.isEnabled = false
+                } else {
+                    self?.loaderView.stopAnimating()
+                    self?.doneButton.isEnabled = true
+                }
+            }
+            .store(in: &cancellables)
     }
 
     required init?(coder: NSCoder) {
@@ -214,6 +242,7 @@ final class AuthViewController: BaseViewController {
     override func addSubviews() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
+        view.addSubview(loaderView)
 
         [loginTextField, emailTextField, passwordTextField, reEnterPasswordTextField].forEach {
             textFieldsStackView.addArrangedSubview($0)
@@ -245,7 +274,10 @@ final class AuthViewController: BaseViewController {
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 800) // Ensure scrollability
+            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 800),
+            
+            loaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loaderView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
 
         NSLayoutConstraint.activate([
@@ -406,6 +438,21 @@ private extension AuthViewController {
 
             viewModel.signIn(login: loginTextField.text ?? "", password: passwordTextField.text ?? "")
         }
+    }
+
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(
+            title: "Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default
+        ))
+        
+        present(alert, animated: true)
     }
 }
 

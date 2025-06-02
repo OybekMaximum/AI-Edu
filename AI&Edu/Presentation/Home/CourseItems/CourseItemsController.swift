@@ -2,7 +2,7 @@
 //  CourseItemsController.swift
 //  AI&Edu
 //
-//  Created by Oybek To’laboyev on 22/04/25.
+//  Created by Oybek To'laboyev on 22/04/25.
 //
 
 import UIKit
@@ -24,6 +24,14 @@ class CourseItemsController: BaseViewController {
         return tableView
     }()
 
+    private let loaderView: UIActivityIndicatorView = {
+        let loaderView = UIActivityIndicatorView()
+        loaderView.translatesAutoresizingMaskIntoConstraints = false
+        loaderView.style = .large
+        loaderView.hidesWhenStopped = true
+        return loaderView
+    }()
+
     private let viewModel: CourseItemsViewModelProtocol
     private var cancellables = Set<AnyCancellable>()
 
@@ -35,6 +43,24 @@ class CourseItemsController: BaseViewController {
             .receive(on: DispatchQueue.main)
             .sink { _ in
                 self.tableView.reloadData()
+            }
+            .store(in: &cancellables)
+            
+        viewModel.showError
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                self?.showErrorAlert(message: errorMessage)
+            }
+            .store(in: &cancellables)
+            
+        viewModel.isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                if isLoading {
+                    self?.loaderView.startAnimating()
+                } else {
+                    self?.loaderView.stopAnimating()
+                }
             }
             .store(in: &cancellables)
     }
@@ -53,6 +79,7 @@ class CourseItemsController: BaseViewController {
 
     override func addSubviews() {
         view.addSubview(tableView)
+        view.addSubview(loaderView)
     }
 
     override func setConstraints() {
@@ -60,8 +87,26 @@ class CourseItemsController: BaseViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            loaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loaderView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+    
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(
+            title: "Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default
+        ))
+        
+        present(alert, animated: true)
     }
 }
 

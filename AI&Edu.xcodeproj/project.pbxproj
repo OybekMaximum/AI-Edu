@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0931AE2DEDD26000D682D8 /* HomeViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0931AD2DEDD26000D682D8 /* HomeViewModelMock.swift */; };
+		AB0931B02DEDD27500D682D8 /* CourseItemsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0931AF2DEDD27500D682D8 /* CourseItemsViewModelMock.swift */; };
 		AB166ECC2DAD066000E1BEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB166EC42DAD066000E1BEC7 /* LaunchScreen.storyboard */; };
 		AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */; };
 		AB166EFA2DAD0D5D00E1BEC7 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166EF22DAD0D5D00E1BEC7 /* SettingsController.swift */; };
@@ -85,6 +87,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0931AD2DEDD26000D682D8 /* HomeViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelMock.swift; sourceTree = "<group>"; };
+		AB0931AF2DEDD27500D682D8 /* CourseItemsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemsViewModelMock.swift; sourceTree = "<group>"; };
 		AB166EC12DAD066000E1BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB166EC32DAD066000E1BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB166EC82DAD066000E1BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -373,6 +377,7 @@
 				AB166EEB2DAD0D5D00E1BEC7 /* HomeCoordinator.swift */,
 				AB166EEA2DAD0D5D00E1BEC7 /* HomeController.swift */,
 				AB166EEC2DAD0D5D00E1BEC7 /* HomeViewModel.swift */,
+				AB0931AD2DEDD26000D682D8 /* HomeViewModelMock.swift */,
 				AB3581AB2DB0FE7C00768E3C /* CourseModel.swift */,
 				AB3581AF2DB109DC00768E3C /* Views */,
 			);
@@ -385,6 +390,7 @@
 				AB53CC542DB7BA5C006D03B3 /* CourseItemsCoordinator.swift */,
 				AB53CC4E2DB7BA2A006D03B3 /* CourseItemModel.swift */,
 				AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */,
+				AB0931AF2DEDD27500D682D8 /* CourseItemsViewModelMock.swift */,
 				AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */,
 				AB53CC4B2DB7B923006D03B3 /* Views */,
 			);
@@ -623,6 +629,7 @@
 			files = (
 				AB166ECE2DAD066000E1BEC7 /* AppDelegate.swift in Sources */,
 				AB166EFA2DAD0D5D00E1BEC7 /* SettingsController.swift in Sources */,
+				AB0931B02DEDD27500D682D8 /* CourseItemsViewModelMock.swift in Sources */,
 				AB166EFB2DAD0D5D00E1BEC7 /* NotificationCenter+Extensions.swift in Sources */,
 				AB166EFC2DAD0D5D00E1BEC7 /* DisabledTextField.swift in Sources */,
 				AB166EFD2DAD0D5D00E1BEC7 /* BaseNavigationController.swift in Sources */,
@@ -681,6 +688,7 @@
 				AB166F112DAD0D5D00E1BEC7 /* UIViewController+Extensions.swift in Sources */,
 				ABCEB3342DCCE44B004F7E4F /* NetworkErrorMapper.swift in Sources */,
 				AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */,
+				AB0931AE2DEDD26000D682D8 /* HomeViewModelMock.swift in Sources */,
 				AB166F122DAD0D5D00E1BEC7 /* HomeCoordinator.swift in Sources */,
 				ABCEB3292DCCE367004F7E4F /* Alamofire+Extensions.swift in Sources */,
 			);
