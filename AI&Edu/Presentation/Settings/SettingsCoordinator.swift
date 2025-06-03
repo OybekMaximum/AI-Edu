@@ -23,6 +23,7 @@ class SettingsCoordinator: BaseCoordinator {
 
 extension SettingsCoordinator: SettingsCoordinatorDelegate {
     func logout() {
+        UserManager.shared.logout()
         appCoordinator?.showAuthPage()
     }
 

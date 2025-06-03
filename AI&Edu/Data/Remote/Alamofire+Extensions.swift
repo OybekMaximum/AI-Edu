@@ -16,7 +16,7 @@ extension Session {
 
         var headers = configuration.headers
 
-        if let token = BuildConfiguration.shared.token {
+        if let token = UserManager.shared.token {
             headers.add(name: "Authorization", value: "Bearer \(token)")
         }
 //        if let deviceId {

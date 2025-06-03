@@ -50,6 +50,9 @@
 		AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F152DAD0E1B00E1BEC7 /* Fonts.swift */; };
 		AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */; };
 		AB1FFC172DEEBF3100F37974 /* WritingExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFC162DEEBF3100F37974 /* WritingExamController.swift */; };
+		AB1FFC2A2DEECA3A00F37974 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFC292DEECA3A00F37974 /* KeychainHelper.swift */; };
+		AB1FFC2C2DEECA4900F37974 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFC2B2DEECA4900F37974 /* UserManager.swift */; };
+		AB1FFC2E2DEECFE200F37974 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFC2D2DEECFE200F37974 /* UserDefaultsWrapper.swift */; };
 		AB2450B22DBBB1A500CC811C /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B12DBBB1A500CC811C /* BaseCardView.swift */; };
 		AB2450B42DBBB1CA00CC811C /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B32DBBB1CA00CC811C /* ProfileCardView.swift */; };
 		AB2450B62DBBB1E400CC811C /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B52DBBB1E400CC811C /* StatisticsView.swift */; };
@@ -143,6 +146,9 @@
 		AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		AB1FFC162DEEBF3100F37974 /* WritingExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingExamController.swift; sourceTree = "<group>"; };
 		AB1FFC1C2DEEC4C800F37974 /* AI&EduTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AI&EduTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB1FFC292DEECA3A00F37974 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		AB1FFC2B2DEECA4900F37974 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		AB1FFC2D2DEECFE200F37974 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		AB2450B12DBBB1A500CC811C /* BaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
 		AB2450B32DBBB1CA00CC811C /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		AB2450B52DBBB1E400CC811C /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -456,6 +462,9 @@
 			isa = PBXGroup;
 			children = (
 				ABA5ADD92DD71ADB00097D5A /* BuildConfiguration.swift */,
+				AB1FFC2B2DEECA4900F37974 /* UserManager.swift */,
+				AB1FFC292DEECA3A00F37974 /* KeychainHelper.swift */,
+				AB1FFC2D2DEECFE200F37974 /* UserDefaultsWrapper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -749,12 +758,14 @@
 				ABA5ADD32DD71A0F00097D5A /* CourseResponsDTOMapper.swift in Sources */,
 				AB166F0B2DAD0D5D00E1BEC7 /* Coordinator.swift in Sources */,
 				AB2450B42DBBB1CA00CC811C /* ProfileCardView.swift in Sources */,
+				AB1FFC2A2DEECA3A00F37974 /* KeychainHelper.swift in Sources */,
 				AB166F0C2DAD0D5D00E1BEC7 /* AppCoordinator.swift in Sources */,
 				AB166F0D2DAD0D5D00E1BEC7 /* TabBarCoordinator.swift in Sources */,
 				ABCEB32F2DCCE3D4004F7E4F /* NetworkErrorInfo.swift in Sources */,
 				AB166F0E2DAD0D5D00E1BEC7 /* SettingsCoordinator.swift in Sources */,
 				ABDA70002DD7573B00D4931E /* SecondWelcomeController.swift in Sources */,
 				AB1FFC172DEEBF3100F37974 /* WritingExamController.swift in Sources */,
+				AB1FFC2E2DEECFE200F37974 /* UserDefaultsWrapper.swift in Sources */,
 				AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */,
 				AB166F0F2DAD0D5D00E1BEC7 /* TabBarController.swift in Sources */,
 				ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */,
@@ -762,6 +773,7 @@
 				AB166F112DAD0D5D00E1BEC7 /* UIViewController+Extensions.swift in Sources */,
 				ABCEB3342DCCE44B004F7E4F /* NetworkErrorMapper.swift in Sources */,
 				AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */,
+				AB1FFC2C2DEECA4900F37974 /* UserManager.swift in Sources */,
 				AB0931AE2DEDD26000D682D8 /* HomeViewModelMock.swift in Sources */,
 				AB166F122DAD0D5D00E1BEC7 /* HomeCoordinator.swift in Sources */,
 				ABCEB3292DCCE367004F7E4F /* Alamofire+Extensions.swift in Sources */,

@@ -64,8 +64,7 @@ class AuthViewModel: AuthViewModelProtocol {
         Task { @MainActor in
             do {
                 let token = try await repository.signIn(login: login, password: password)
-                BuildConfiguration.shared.token = token
-                BuildConfiguration.shared.userName = login
+                UserManager.shared.saveUserToken(token: token, name: login)
                 showOnboarding()
             } catch let error as NetworkError {
                 handleNetworkError(error)

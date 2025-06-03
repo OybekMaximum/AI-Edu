@@ -53,7 +53,7 @@ class SettingsController: BaseViewController {
         super.initialize()
 
         // Configure the ProfileCardView with sample data
-        profileCardView.configure(with: .iconBook, loginText: BuildConfiguration.shared.userName ?? "UNKNOWN USER")
+        profileCardView.configure(with: .iconBook, loginText: UserManager.shared.user ?? "UNKNOWN USER")
 
 
         profileCardView.onLogoutTapped = { [weak self] in
@@ -110,7 +110,6 @@ class SettingsController: BaseViewController {
             achievementsCardView.topAnchor.constraint(equalTo: statisticsCardView.bottomAnchor, constant: 10),
             achievementsCardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             achievementsCardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-
         ])
     }
 }

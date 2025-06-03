@@ -27,7 +27,11 @@ final class AppCoordinator: BaseCoordinator {
     }
 
     func launchApp() {
-        showAuthPage()
+        if UserManager.shared.token == nil {
+            showAuthPage()
+        } else {
+            showMainPage()
+        }
     }
 
     func showAuthPage() {
