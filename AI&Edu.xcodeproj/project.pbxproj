@@ -49,6 +49,7 @@
 		AB166F2B2DAD0E1B00E1BEC7 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB166F172DAD0E1B00E1BEC7 /* Inter-Bold.ttf */; };
 		AB166F2C2DAD0E1B00E1BEC7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F152DAD0E1B00E1BEC7 /* Fonts.swift */; };
 		AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */; };
+		AB1FFC172DEEBF3100F37974 /* WritingExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FFC162DEEBF3100F37974 /* WritingExamController.swift */; };
 		AB2450B22DBBB1A500CC811C /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B12DBBB1A500CC811C /* BaseCardView.swift */; };
 		AB2450B42DBBB1CA00CC811C /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B32DBBB1CA00CC811C /* ProfileCardView.swift */; };
 		AB2450B62DBBB1E400CC811C /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2450B52DBBB1E400CC811C /* StatisticsView.swift */; };
@@ -130,6 +131,7 @@
 		AB166F1E2DAD0E1B00E1BEC7 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		AB166F202DAD0E1B00E1BEC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB166F2E2DAD0F8700E1BEC7 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		AB1FFC162DEEBF3100F37974 /* WritingExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingExamController.swift; sourceTree = "<group>"; };
 		AB2450B12DBBB1A500CC811C /* BaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
 		AB2450B32DBBB1CA00CC811C /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
 		AB2450B52DBBB1E400CC811C /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				AB53CC502DB7BA47006D03B3 /* CourseItemsViewModel.swift */,
 				AB0931AF2DEDD27500D682D8 /* CourseItemsViewModelMock.swift */,
 				AB53CC522DB7BA51006D03B3 /* CourseItemsController.swift */,
+				AB1FFC162DEEBF3100F37974 /* WritingExamController.swift */,
 				AB53CC4B2DB7B923006D03B3 /* Views */,
 			);
 			path = CourseItems;
@@ -681,6 +684,7 @@
 				ABCEB32F2DCCE3D4004F7E4F /* NetworkErrorInfo.swift in Sources */,
 				AB166F0E2DAD0D5D00E1BEC7 /* SettingsCoordinator.swift in Sources */,
 				ABDA70002DD7573B00D4931E /* SecondWelcomeController.swift in Sources */,
+				AB1FFC172DEEBF3100F37974 /* WritingExamController.swift in Sources */,
 				AB166F2F2DAD0F8700E1BEC7 /* Assets.swift in Sources */,
 				AB166F0F2DAD0D5D00E1BEC7 /* TabBarController.swift in Sources */,
 				ABCEB3372DCCE49B004F7E4F /* ErrorResponseDTO.swift in Sources */,

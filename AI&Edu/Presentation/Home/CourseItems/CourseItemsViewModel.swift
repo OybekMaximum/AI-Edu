@@ -14,6 +14,8 @@ protocol CourseItemsViewModelProtocol: AnyObject {
     var reloadTableView: PassthroughSubject<Void, Never> { get }
     var showError: PassthroughSubject<String, Never> { get }
     var isLoading: PassthroughSubject<Bool, Never> { get }
+
+    func showWritingExam()
 }
 
 class CourseItemsViewModel: CourseItemsViewModelProtocol {
@@ -23,7 +25,8 @@ class CourseItemsViewModel: CourseItemsViewModelProtocol {
     
     let courseId: Int
     var courseItems: [CourseItemModel] = []
-    
+    weak var coordinatorDelegate: CourseItemsCoordinatorDelegate?
+
     private let repository: CoursesRepository
     private var retryCount = 0
     private let maxRetries = 3
@@ -51,7 +54,11 @@ class CourseItemsViewModel: CourseItemsViewModelProtocol {
             isLoading.send(false)
         }
     }
-    
+
+    func showWritingExam() {
+        coordinatorDelegate?.showWritingExam()
+    }
+
     private func handleNetworkError(_ error: NetworkError) {
         switch error {
         case .noInternetConnection:

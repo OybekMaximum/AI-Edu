@@ -24,6 +24,28 @@ class CourseItemsController: BaseViewController {
         return tableView
     }()
 
+    private lazy var footerView: UIButton = {
+        let frame = CGRect(origin: .zero, size: .init(width: view.bounds.width, height: 72))
+        let config = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
+        let image = UIImage(systemName: "square.and.pencil", withConfiguration: config)
+        let normalColor = UIColor.blue
+        let highlightedColor = UIColor.blue.withAlphaComponent(0.6)
+
+        let button = UIButton(frame: frame)
+        button.setTitle("Take a writing exam", for: .normal)
+        button.titleLabel?.font = Fonts.Inter.bold.font(size: 20)
+        button.setTitleColor(normalColor, for: .normal)
+        button.setTitleColor(highlightedColor, for: .highlighted)
+        button.setImage(image?.withRenderingMode(.alwaysOriginal).withTintColor(normalColor), for: .normal)
+        button.setImage(image?.withRenderingMode(.alwaysOriginal).withTintColor(highlightedColor), for: .normal)
+        button.contentVerticalAlignment = .center
+        button.contentHorizontalAlignment = .leading
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 28, bottom: 0, right: 0)
+        button.addTarget(self, action: #selector(showWritingExam), for: .touchUpInside)
+        return button
+    }()
+
     private let loaderView: UIActivityIndicatorView = {
         let loaderView = UIActivityIndicatorView()
         loaderView.translatesAutoresizingMaskIntoConstraints = false
@@ -78,6 +100,7 @@ class CourseItemsController: BaseViewController {
     }
 
     override func addSubviews() {
+        tableView.tableFooterView = footerView
         view.addSubview(tableView)
         view.addSubview(loaderView)
     }
@@ -107,6 +130,11 @@ class CourseItemsController: BaseViewController {
         ))
         
         present(alert, animated: true)
+    }
+
+    @objc
+    private func showWritingExam() {
+        viewModel.showWritingExam()
     }
 }
 

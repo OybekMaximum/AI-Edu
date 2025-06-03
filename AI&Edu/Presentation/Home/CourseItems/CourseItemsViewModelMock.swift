@@ -62,4 +62,8 @@ class CourseItemsViewModelMock: CourseItemsViewModelProtocol {
 
         self.courseItems = courseItems
     }
+    
+    func showWritingExam() {
+
+    }
 }
