@@ -21,7 +21,7 @@ class SecondWelcomeController: BaseViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Discover Your Career!"
-        label.textColor = .white
+        label.textColor = .purple
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class SecondWelcomeController: BaseViewController {
     private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Take a free test to find the career path that suits you."
-        label.textColor = .white
+        label.textColor = .purple
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0

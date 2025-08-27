@@ -22,7 +22,7 @@ class FirstWelcomeController: BaseViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome to EduEx!"
-        label.textColor = .white
+        label.textColor = .purple
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ class FirstWelcomeController: BaseViewController {
     private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Start your English learning journey with a personalized program"
-        label.textColor = .white
+        label.textColor = .purple
         label.font = UIFont.systemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
